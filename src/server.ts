@@ -8,8 +8,10 @@ app.use(express.json());
 
 app.use(express.static('public'));
 
-app.get('/', (req: Request, res: Response) => {
-	res.send('hello world');
+app.get('/users', (req: Request, res: Response) => {
+	res.json({
+		message: 'ola'
+	});
 });
 
 app.listen(3333, () => {
